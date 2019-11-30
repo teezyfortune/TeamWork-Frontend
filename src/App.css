@@ -1,20 +1,364 @@
-.App {
-  text-align: center;
+
+body{
+  background: #3d3d3d;
+}
+*{
+  margin :0;
+  padding:0;
 }
 
-.App-logo {
-  height: 40vmin;
+a {
+  text-decoration: none;
+  color: #fff;
+  font-family:"Comic Sans Ms";
+  font-size: 16px;
+}
+a:hover{
+  color: lawngreen;
 }
 
-.App-header {
-  background-color: #ffffff;
+header {
+  display:flex;
+  align-items: center;
+  flex-basis: 100%; 
+  background: coral;
+  justify-content: space-around;
+  border-bottom: 3px solid navy ;
+}
+
+header nav {
+  display: inline-flex;
+  margin: 20px ;
+  
+}
+header nav ul{
+  margin-right: 100px;    
+}
+
+header ul li{
+  list-style:none;
+  display: inline;
+  margin-left: 20px;
+  text-transform: uppercase;
+
+}
+
+.logo{
+  margin-left: 20rem;
+  border-right: 5px solid grey;
+  padding: 7px;
+  line-height: 20px;
+  
+  
+  
+}
+
+/* 
+.bar{
+  height:5px;
+  width:30px;
+  background: navy;
+  margin: 5px;
+  display:block;
+} */
+
+
+.banner{
   display: flex;
-  flex-direction: column;
+  margin-bottom: 30px;
+  min-height: 80vh;
+  background-repeat: no-repeat;
+  background-position: cover;
+  overflow: hidden;
+  background-size: 100%;
+  text-align: center;
+  text-align: center;
+
+}
+
+.banner-text{
+  margin:10rem auto;
+
+}
+.banner h1{
+  font-family: "Comic Sans Ms, Sanserif";
+  font-size: 50px;
+  font-weight: 900;
+  color: #fff;
+      text-shadow:1px 1px #111;
+
+}
+.banner-text h2{
+  text-align: center;
+  font-family: "Comic Sans Ms, Sanserif";
+  font-size: 28px;
+  font-weight: 900;
+  color: #fff;
+  text-shadow:1px 1px #33cc;
+  text-decoration-style: dotted;
+  margin-top: 20px;
+
+}
+.show-text{
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 26px;
+  text-transform: uppercase;
+  background: #112233;
+  color: #fff;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+
+
+}
+/* tab grid content */
+  .tabs{
+  padding: 20px;
+  background:  grey;
+  border-bottom: 3px solid #3d3d3d;
+  color: #fff;
+  font-family: "comic sans ms";
+  font-size: 24px;
+  text-transform: capitalize;
+}
+.tabs .grid {
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
   align-items: center;
   justify-content: center;
-  color: black;
+  text-align: center;
+
+}
+.grid{
+  max-width:70%;
+  margin:auto;
+  overflow: hidden;
+  padding: 0 2rem;
+}
+.tabs .grid > div:hover {
+color:coral;
+cursor: pointer;
+}
+.border-tab{
+  border-bottom: red 4px solid;
 }
 
-.App-link {
-  color: #09d3ac;
+/* tab content */
+.tab-content{
+  padding: 3rem 0;
+  background-color: black;
+  color: #fff;
+}
+
+
+/* hide all cotent initially */
+#tab-1-content,
+#tab-2-content,
+#tab-3-content{
+display: none;
+}
+
+#show{
+  display:block !important;   
+}
+
+#tab-1-content .tab-1-content-inner{
+display:grid;
+grid-template-columns: repeat(2, 1fr);
+grid-gap: 2rem; 
+justify-content: center;
+align-items: center;
+margin-left: 2rem;
+}
+#tab-2-content .tab-1-content-inner{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem; 
+  justify-content: center;
+  align-items: center;
+  margin-left: 2rem;
+ 
+}#tab-3-content .tab-1-content-inner{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem; 
+      justify-content: center;
+      align-items: center;
+      margin-left: 2rem;
+      }
+.btn{
+   background: red;
+   color: #fff;
+   padding: 0.4rem 1.3rem;
+   border:none;
+   outline: none;
+   cursor:pointer;
+   margin-right:0.5rem;
+   box-shadow: 0 1px 0 rgba(0,0, 0, 0.45);
+   border-radius: 2px;
+   
+}
+.text-lg{
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.text-dark{
+  color: #999;
+}
+
+/* footer */
+footer{
+  max-width: 100%; 
+  margin: 0 auto;
+  background: #112233;
+  color: #fff;
+}
+.footer-div{
+  display: flex;
+  justify-content: space-around;
+  text-transform: capitalize;
+  font-family: "comic sans ms"
+} 
+
+.address{
+   list-style:none;
+   margin: 1.3rem
+}
+
+
+.quick-link{
+  list-style:none;
+  margin: 1.3rem;
+}
+
+.sm  {
+  margin: 20px 0;
+}
+.sm a {
+ 
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  display:inline-flex;
+  justify-content:center;
+  align-items: center;
+  margin:0 5px;
+  height:30px;
+  width:30px; 
+
+}
+.sm a:hover {
+ color: red;
+}
+
+.desig-text{
+  color:
+}
+@media(max-width:600px){
+  header {
+      display:block;    
+  }
+  header nav {
+      margin: 20px 100px 0 20px ;
+      display: flex;
+      margin-bottom: 20px;
+  
+  }
+  .bar{
+      height:4px;
+      width:25px;
+      background: navy;
+      margin: 4px;
+      display: block;
+      cursor: pointer;
+      border-radius:6px;
+  }
+  .hamburger{
+      background: #fff;
+      height:26px;
+      width:30px;
+      padding-right: 2px;
+      padding-bottom:2px;
+      border-radius:3px;
+      margin: 10px 0;
+          cursor: pointer;
+  }
+  header nav .logo{
+      margin-right: 1.6rem;
+      margin-left: 2rem;
+      line-height: 30px;
+      padding-bottom: 30px;
+  }
+}
+
+@media(max-width:600px){
+.hide{
+    display: none;
+  }
+}
+
+@media(max-width:600px){
+  
+  }
+
+
+
+@media (max-width:900px){
+.banner{ 
+ height:70vh;
+
+}
+.banner-text{
+  margin: 1.5rem;
+}
+.banner-text h1{
+  font-size: 24px;
+  margin-bottom: 0.5rem;
+  
+}
+.banner-text h2{
+  
+  font-size: 20px;
+  font-weight: 900;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+
+}
+
+@media(max-width: 700px){
+
+
+  #tab-1-content .tab-1-content-inner{
+      display:grid;
+      grid-template-columns:  1fr;
+     
+      }
+      #tab-2-content .tab-1-content-inner{
+          display:grid;
+      grid-template-columns: 1fr;
+     
+          /* display: block;
+          align-items: center;
+          margin-left: 2rem;
+          */
+      }#tab-3-content .tab-1-content-inner{
+          display:grid;
+         grid-template-columns: 1fr;
+     
+              /* display:grid;
+              grid-template-columns: repeat(2, 1fr);
+              grid-gap: 2rem; 
+              justify-content: center;
+              align-items: center;
+              margin-left: 2rem; */
+              }
+              .grid{
+                  max-width:80%;
+          
+              }
+              
+  
 }
