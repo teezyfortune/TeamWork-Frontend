@@ -1,51 +1,45 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
-import { logoutUser } from '../../actions/auth';
-import { withRouter } from 'react-router-dom';
+// import { connect } from 'react-redux'
+// import { logoutUser } from '../../actions/auth';
 
 class Header extends Component {
-  onLogoutClick(e) {
-    e.preventDefault();
-    this.props.logoutUser(this.props.history);
-  }
+//   onLogoutClick(e) {
+//     e.preventDefault();
+//     this.props.logoutUser(this.props.history);
+//   }
 
   render() {
     return (
-  
+           <div>
              <header>
              <nav>
              <ul className = "show">
+             <div>
              <li>
-             <link  to = '#' >  LOGO </link>
+             <a  href = '/' >  LOGO </a>
           </li>
-             <li><Link className="nav-link" to="/register" style={{ cursor: 'pointer' }}>
+          </div>
+          
+             <li><a className="nav-link" href="/register" style={{ cursor: 'pointer' }}>
               Create Employee
-            </Link></li>
+            </a></li>
         <li className="nav-item dropdown">
-        <Link className="dropdown-item" to="/create-gif">Gif Post</Link>
+        <a className="dropdown-item" href="/create-gif">Gif Post</a>
         </li>
-      <li>  <Link className="dropdown-item" to="/create-article"> Post Article</Link></li>
+      <li>  <a className="dropdown-item" href="/create-article"> Post Article</a></li>
 
-        <li className="nav-item"><link  onClick={this.onLogoutClick.bind(this)} className="nav-link"> log out</link>
+        <li className="nav-item"><a  href = '/logout'> log out</a>
           </li>
           </ul>
           </nav>
           </header>
+          </div>
     );
     
   }
 }
 
-Header.propTypes = {
-  auth: PropTypes.object.isRequired,
-  logoutUser: PropTypes.func.isRequired
-}
-
-const mapStateToProps = state => ({
-  auth: state.auth
-})
 
 
-export default connect(mapStateToProps, { logoutUser })(withRouter(Header));
+export default Header;
